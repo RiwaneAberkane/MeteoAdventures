@@ -1,0 +1,15 @@
+{
+  "name": "meteor_adventures",
+  "version": "1.0.0",
+  "description": "Description de votre application",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "3.0.1"
+  }
+}
