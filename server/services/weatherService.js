@@ -1,5 +1,5 @@
 const axios = require("axios");
-const config = require("./config"); // Chemin du fichier de configuration
+const config = require("../config"); // Chemin du fichier de configuration
 
 const fetchWeatherData = async (location) => {
   const API_KEY = config.API_KEY; // Utilisation de la clé d'API depuis le fichier de configuration
