@@ -1,10 +1,15 @@
 import "./App.css";
+import React, { useState } from "react";
+import WeatherSearch from "./components/WeatherSearch";
+import WeatherDisplay from "./components/WeatherDisplay";
 
 function App() {
+  const [weatherData, setWeatherData] = useState(null);
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Meteor Adventures</h1>
+        <WeatherSearch setWeatherData={setWeatherData} />
+        <WeatherDisplay weatherData={weatherData} />
       </header>
     </div>
   );
