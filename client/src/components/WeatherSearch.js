@@ -9,6 +9,7 @@ function WeatherSearch() {
       const response = await fetch(
         `http://localhost:3000/api/weather?location=${city}`
       );
+      console.log(response);
       const data = await response.json();
       setWeatherData(data);
     } catch (error) {
