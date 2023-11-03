@@ -7,9 +7,8 @@ function WeatherSearch() {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/weather?location=${city}`
+        `http://localhost:4000/api/weather?location=${city}`
       );
-      console.log(response);
       const data = await response.json();
       console.log(data);
       setWeatherData(data);
