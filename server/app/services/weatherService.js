@@ -6,7 +6,7 @@ const fetchWeatherData = async (location) => {
     console.log(response);
     return response;
   } catch (error) {
-    return "FUCK SHIT";
+    return "Error fetching";
   }
 };
 module.exports = {
