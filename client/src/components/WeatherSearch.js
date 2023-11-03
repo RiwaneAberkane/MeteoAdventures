@@ -33,7 +33,6 @@ function WeatherSearch() {
       {weatherData && (
         <div>
           <h2>Météo pour {weatherData.name}</h2>
-          <h3>{weatherData.clouds.all}</h3>
           <p>{weatherData.weather[0].main}</p>
         </div>
       )}
