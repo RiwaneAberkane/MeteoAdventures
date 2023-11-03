@@ -11,6 +11,7 @@ function WeatherSearch() {
       );
       console.log(response);
       const data = await response.json();
+      console.log(data);
       setWeatherData(data);
     } catch (error) {
       console.error(
@@ -33,7 +34,8 @@ function WeatherSearch() {
       {weatherData && (
         <div>
           <h2>Météo pour {weatherData.name}</h2>
-          {/* Afficher d'autres informations météorologiques ici */}
+          <h3>{weatherData.clouds.all}</h3>
+          <p>{weatherData.weather[0].main}</p>
         </div>
       )}
     </div>
