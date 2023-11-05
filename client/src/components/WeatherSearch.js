@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./WeatherSearch.css";
+import WeatherCard from "./WeatherCard";
 
 function WeatherSearch() {
   const [city, setCity] = useState("");
@@ -20,10 +21,6 @@ function WeatherSearch() {
     }
   };
 
-  const getWeatherIconUrl = (iconCode) => {
-    return `http://openweathermap.org/img/w/${iconCode}.png`;
-  };
-
   return (
     <div className="weatherSearch">
       <div className="weatherSearch-top">
@@ -41,19 +38,7 @@ function WeatherSearch() {
           Rechercher la météo
         </button>
       </div>
-      {weatherData && (
-        <div className="information">
-          <h2>Météo pour {weatherData.name}</h2>
-          <p>{weatherData.weather[0].main}</p>
-          {/* Affichage de l'icône météo */}
-          {weatherData.weather && weatherData.weather[0].icon && (
-            <img
-              src={getWeatherIconUrl(weatherData.weather[0].icon)}
-              alt="Weather Icon"
-            />
-          )}
-        </div>
-      )}
+      {weatherData && <WeatherCard weatherData={weatherData} />}
     </div>
   );
 }
