@@ -1,26 +1,23 @@
-/* Style pour la navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    padding: 10px;
+    padding: 15px;
     color: #FFF;
     font-family: Arial, sans-serif;
   }
   
-  /* Style pour le logo */
-  .logo img {
-    width: 20rem; /* Ajustez la taille du logo selon vos besoins */
-  }
+.logo img {
+    width: 10rem;
+}
   
-  /* Style pour le nom de l'application */
-  .app-name {
-    font-size: 20px;
-  }
+.app-name {
+    font-size: 2em;
+}
   
-  /* Style pour "by Riwane" */
-  .by-riwane {
-    font-size: 14px;
-  }
+.by-riwane {
+    font-size: 1em;
+    font-style: italic;
+}
   
