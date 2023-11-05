@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./WeatherSearch.css";
 
 function WeatherSearch() {
   const [city, setCity] = useState("");
@@ -21,7 +22,7 @@ function WeatherSearch() {
   };
 
   return (
-    <div>
+    <div className="weatherSearch">
       <input
         type="text"
         value={city}
