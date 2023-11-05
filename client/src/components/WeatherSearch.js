@@ -11,7 +11,6 @@ function WeatherSearch() {
         `http://localhost:4000/api/weather?location=${city}`
       );
       const data = await response.json();
-      console.log(data);
       setWeatherData(data);
     } catch (error) {
       console.error(
@@ -23,16 +22,23 @@ function WeatherSearch() {
 
   return (
     <div className="weatherSearch">
-      <input
-        type="text"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-        placeholder="Entrez le nom de la ville"
-      />
-      <button onClick={handleSearch}>Rechercher la météo</button>
-
+      <div className="weatherSearch-top">
+        <div class="form-group mx-sm-3 mb-2">
+          <input
+            type="text"
+            class="form-control"
+            id="inputCity"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            placeholder="City"
+          />
+        </div>
+        <button onClick={handleSearch} class="btn btn-primary mb-2">
+          Rechercher la météo
+        </button>
+      </div>
       {weatherData && (
-        <div>
+        <div className="information">
           <h2>Météo pour {weatherData.name}</h2>
           <p>{weatherData.weather[0].main}</p>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.css"; // Import du fichier CSS pour les styles
+import "./Navbar.css";
 import logo from "../assets/Logo.png";
 
 const Navbar = () => {
